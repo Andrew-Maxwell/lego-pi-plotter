@@ -20,9 +20,17 @@ class plotter:
 	rplus005 = 0.518
 	rminus005 = -0.488
 	
-	raxis = rzero = -1.5				#position when R axis hits stop
-	rstore = 0					#buffered R value
-	rstoptime = 0.0				#Time this motor turned off
+	#position of R axis hits stop
+	
+	raxis = rzero = -1.5
+	
+	#R distance buffer
+	
+	rstore = 0
+	
+	#Time this motor turned off
+	
+	rstoptime = 0.0
 	
 	taxis = tzero = 0.371
 	tstore = 0
@@ -38,7 +46,9 @@ class plotter:
 	rzeromargin = 3.5	
 	tzeromargin = 0.025
 	
-	timedelay = 0		#Used for milling experiments
+	#Used for milling experiments
+	
+	timedelay = 0
 	
 	#GPIO pin assignments
 	
