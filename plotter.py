@@ -65,13 +65,13 @@ class plotter:
 		
 		self.enable = 12
 				
-		GPIO.setup(zplusout, GPIO.OUT)
-		GPIO.setup(zminusout, GPIO.OUT)
-		GPIO.setup(rminusout, GPIO.OUT)
-		GPIO.setup(rplusout, GPIO.OUT)
-		GPIO.setup(tplusout, GPIO.OUT)
-		GPIO.setup(tminusout, GPIO.OUT)
-		GPIO.setup(enable, GPIO.OUT)
+		GPIO.setup(self.zplusout, GPIO.OUT)
+		GPIO.setup(self.zminusout, GPIO.OUT)
+		GPIO.setup(self.rminusout, GPIO.OUT)
+		GPIO.setup(self.rplusout, GPIO.OUT)
+		GPIO.setup(self.tplusout, GPIO.OUT)
+		GPIO.setup(self.tminusout, GPIO.OUT)
+		GPIO.setup(self.enable, GPIO.OUT)
 		
 	def stop(self):
 		GPIO.output(self.zplusout, GPIO.LOW)
