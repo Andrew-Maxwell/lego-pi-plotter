@@ -26,7 +26,7 @@ The Z axis uses a linear actuator to precisely raise and lower the pen. I overbu
 
 ![Drift test](https://i.imgur.com/Kv6h4qk.png)
 
-Drift was down to about 1mm drift for every 10cm of line in the best case, after careful calibration. (The square below is about 3cm on a side. Each repetition of the pattern was consecutive without resetting the pen in between. More precise drawings are possible by resetting the pen position to 0 between repetitions.) In the other photos, the drift was much worse because I didn't take the time to calibrate it properly for those tests.
+Drift was down to about 1mm drift for every 10cm of line in the best case, after careful calibration. (The square above is about 3cm on a side.) In the other photos, the drift was much worse because I didn't take the time to calibrate it properly for those tests.
 
 Here’s the plotter in action. In real time, it took about 4 minutes to draw a smiley face:
 [Plotter demo video](https://youtu.be/e8Liu4fvG38)
