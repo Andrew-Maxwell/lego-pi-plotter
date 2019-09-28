@@ -7,70 +7,72 @@ import datetime
 GPIO.setmode(GPIO.BOARD)
 	
 class plotter:
+	
+	def __init__(self):
 
-	#given in mm/second
-	
-	zplusmaxspeed = 2.5
-	zminusmaxspeed = 2.5
-	
-	#Distance along the axis the pen will travel in e.g. 0.05 seconds
-	
-	tplus005 = 0.002698
-	tminus005 = -0.00255
-	rplus005 = 0.518
-	rminus005 = -0.488
-	
-	#position of R axis hits stop
-	
-	raxis = rzero = -1.5
-	
-	#R distance buffer
-	
-	rstore = 0
-	
-	#Time this motor turned off
-	
-	rstoptime = 0.0
-	
-	taxis = tzero = 0.371
-	tstore = 0
-	tstoptime = 0.0
-	
-	zaxis = 0
-	xaxis = xzero = 32
-	
-	radius = 88.25
-	
-	#Defines the margin of error when driving a motor to the stop to reset
-	
-	rzeromargin = 3.5	
-	tzeromargin = 0.025
-	
-	#Used for milling experiments
-	
-	timedelay = 0
-	
-	#GPIO pin assignments
-	
-	zplusout = 8
-	zminusout = 10
-	
-	rplusout = 18
-	rminusout = 16
-	
-	tplusout = 24
-	tminusout = 26
-	
-	enable = 12
-	
-	GPIO.setup(zplusout, GPIO.OUT)
-	GPIO.setup(zminusout, GPIO.OUT)
-	GPIO.setup(rminusout, GPIO.OUT)
-	GPIO.setup(rplusout, GPIO.OUT)
-	GPIO.setup(tplusout, GPIO.OUT)
-	GPIO.setup(tminusout, GPIO.OUT)
-	GPIO.setup(enable, GPIO.OUT)
-	
+		#given in mm/second
+		
+		self.zplusmaxspeed = 2.5
+		self.zminusmaxspeed = 2.5
+		
+		#Distance along the axis the pen will travel in e.g. 0.05 seconds
+		
+		self.tplus005 = 0.002698
+		self.tminus005 = -0.00255
+		self.rplus005 = 0.518
+		self.rminus005 = -0.488
+		
+		#position of R axis hits stop
+		
+		self.raxis = self.rzero = -1.5
+		
+		#R distance buffer
+		
+		self.rstore = 0
+		
+		#Time this motor turned off
+		
+		self.rstoptime = 0.0
+		
+		self.taxis = self.tzero = 0.371
+		self.tstore = 0
+		self.tstoptime = 0.0
+		
+		self.zaxis = 0
+		self.xaxis = self.xzero = 32
+		
+		self.radius = 88.25
+		
+		#Defines the margin of error when driving a motor to the stop to reset
+		
+		self.rzeromargin = 3.5	
+		self.tzeromargin = 0.025
+		
+		#Used for milling experiments
+		
+		self.timedelay = 0
+		
+		#GPIO pin assignments
+		
+		self.zplusout = 8
+		self.zminusout = 10
+		
+		self.rplusout = 18
+		self.rminusout = 16
+		
+		self.tplusout = 24
+		self.tminusout = 26
+		
+		self.enable = 12
+				
+		GPIO.setup(zplusout, GPIO.OUT)
+		GPIO.setup(zminusout, GPIO.OUT)
+		GPIO.setup(rminusout, GPIO.OUT)
+		GPIO.setup(rplusout, GPIO.OUT)
+		GPIO.setup(tplusout, GPIO.OUT)
+		GPIO.setup(tminusout, GPIO.OUT)
+		GPIO.setup(enable, GPIO.OUT)
+		
 	def stop(self):
 		GPIO.output(self.zplusout, GPIO.LOW)
 		GPIO.output(self.zminusout, GPIO.LOW)
